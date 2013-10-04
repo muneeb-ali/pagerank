@@ -5,7 +5,7 @@ Script for fetching Google's PageRank for websites (educational use only)
 
 EXAMPLE: 
 
-    git clone git@github.com:neebi/pagerank.git
+    git clone git@github.com:muneeb-ali/pagerank.git
     cd pagerank
     chmod 755 get_pagerank.py 
-    ./get_pagerank.py http://muneeb.org 
+    ./get_pagerank.py http://muneeb.org
