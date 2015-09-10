@@ -6,19 +6,24 @@
 import sys
 from pagerank import GetPageRank
 
+
 def my_func(input):
 
-    pagerank = GetPageRank(input) 
+    pagerank = GetPageRank(input)
     pagerank = pagerank.split(':')
-    print "PageRank of " + input + " is: " + pagerank[2]
-    
+    try:
+        print "PageRank of " + input + " is: " + pagerank[2]
+    except:
+        print "PageRank doesn't exist at remote"
+
+
 def usage():
     print 'Usage: {prog} <url>'.format(prog=sys.argv[0])
-    return -1 
-    
+    return -1
+
 if __name__ == "__main__":
-  
+
     if len(sys.argv) != 2:
-        usage() 
+        usage()
     else:
         my_func(sys.argv[1])
