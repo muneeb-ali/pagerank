@@ -11,10 +11,15 @@ def my_func(input):
 
     pagerank = GetPageRank(input)
     pagerank = pagerank.split(':')
+
+    site_pagerank = 0
+
     try:
-        print "PageRank of " + input + " is: " + pagerank[2]
+        site_pagerank = pagerank[2].rstrip('\n')
     except:
-        print "PageRank doesn't exist at remote"
+        site_pagerank = 0
+
+    print "PageRank of " + input + " is: " + str(site_pagerank)
 
 
 def usage():
